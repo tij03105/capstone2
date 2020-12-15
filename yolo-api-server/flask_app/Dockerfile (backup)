@@ -1,13 +1,15 @@
 # Start FROM Nvidia PyTorch image https://ngc.nvidia.com/catalog/containers/nvidia:pytorch
-FROM nvcr.io/nvidia/pytorch:19.10-py3
+FROM nvcr.io/nvidia/pytorch:19.09-py3
 #FROM python
 
 # Install dependencies
 RUN pip install --upgrade pip
 COPY requirements.txt .
+RUN pip install -r requirements.txt
+RUN pip3 install https://download.pytorch.org/whl/cu101/torch-1.7.0%2Bcu101-cp38-cp38-linux_x86_64.whl
+RUN pip3 install https://download.pytorch.org/whl/cu101/torchvision-0.8.1%2Bcu101-cp38-cp38-linux_x86_64.whl
 RUN sudo apt-get update
-RUN pip install https://download.pytorch.org/whl/cu101/torch-1.7.0%2Bcu101-cp36-cp36m-linux_x86_64.whl
-RUN pip install https://download.pytorch.org/whl/cu101/torchvision-0.8.0-cp36-cp36m-linux_x86_64.whl
+RUN sudo apt-get -y install cuda
 RUN pip install gsutil
 RUN pip install flask
 RUN pip install gunicorn
