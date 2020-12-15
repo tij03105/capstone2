@@ -8,6 +8,7 @@ RUN pip install --upgrade pip
 RUN pip install gsutil
 RUN pip install flask
 RUN pip install gunicorn
+RUN pip install flask_cors
 
 # Create working directory
 RUN mkdir -p /usr/src/app
