@@ -5,3 +5,4 @@ yolo-api-server를 사용하기 위해서는 docker가 필요합니다.
 *주의* 윈도우 도커 환경에서는 cuda가 지원이 되지않아서 리눅스를 사용하는것을 권장합니다.
 
 클라이언트는 react-app폴더 내부에서 npm run start 커맨드로 실행할 수 있습니다.
+yolov5에 대한 자세한 설명은 https://github.com/ultralytics/yolov5 을 참조하십시오
