@@ -19,7 +19,7 @@ class Form extends Component {
 
     let file = this.state.file
     let formdata = new FormData()
-    let url = "http://49.143.17.115/predict"
+    let url = "http://192.168.0.2/predict"
     let axiosConfig = {
         headers: {
             'Content-Type': 'multipart/form-data'

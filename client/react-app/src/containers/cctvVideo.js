@@ -18,7 +18,7 @@ class Form extends Component {
 
    handleUpload(file) {
     let formdata = new FormData()
-    let url = "http://49.143.17.115/predict"
+    let url = "http://3.137.149.162/predict"
     let axiosConfig = {
         headers: {
             'Content-Type': 'multipart/form-data'
